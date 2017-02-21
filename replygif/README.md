@@ -23,7 +23,7 @@ In this field you must enter: `http://replygif.net/api`
 This value must be `true`
 
 ##### Script
-Now insert the complete code of the file `integration.js` into this field.
+Now insert the complete code of the file [integration.js](integration.js) into this field.
 
 #### Save changes
 Click on "SAVE CHANGES" and you're done.
