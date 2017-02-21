@@ -1,14 +1,3 @@
-/* exported Script */
-/* globals console, _, s, HTTP, Store */
-
-/** Global Helpers
- *
- * console - A normal console instance
- * _       - An underscore instance
- * s       - An underscore string instance
- * HTTP    - The Meteor HTTP object to do sync http calls
- */
-
 class Script {
 	constructor() {
 		this.host = 'https://cloud.docker.com';
@@ -31,7 +20,7 @@ class Script {
 							}
 						};
 
-						var result = this.run('PATCH', '/api/app/v1/service/' + uuid + '/', options);
+						this.run('PATCH', '/api/app/v1/service/' + uuid + '/', options);
 
 						return {
 							action: 'changeTag',
@@ -116,7 +105,7 @@ class Script {
 							}
 						};
 
-						var result = this.run('PATCH', '/api/app/v1/service/' + uuid + '/', options);
+						this.run('PATCH', '/api/app/v1/service/' + uuid + '/', options);
 
 						return {
 							action: 'scaleDown',
@@ -148,7 +137,7 @@ class Script {
 							}
 						};
 
-						var result = this.run('PATCH', '/api/app/v1/service/' + uuid + '/', options);
+						this.run('PATCH', '/api/app/v1/service/' + uuid + '/', options);
 
 						return {
 							action: 'scaleUp',
@@ -444,6 +433,7 @@ class Script {
 		options = _.extend({
 			auth: this.user + ':' + this.apiKey
 		}, options);
+
 		return HTTP(method, this.host + url, options);
 	}
 
@@ -480,4 +470,3 @@ class Script {
 		return nameOrUuid;
 	}
 }
-
