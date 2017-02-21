@@ -1,0 +1,32 @@
+{
+  "name": "rocket-chat-integrations",
+  "description": "Repository which contains integration scripts for usage inside of Rocket.Chat.",
+  "version": "1.0.0",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/RocketChat/Rocket.Chat.Integrations.git"
+  },
+  "keywords": [
+    "rocket.chat",
+    "integrations"
+  ],
+  "author": {
+    "name": "Rocket.Chat",
+    "url": "https://rocket.chat/"
+  },
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/RocketChat/Rocket.Chat.Integrations/issues"
+  },
+  "homepage": "https://rocket.chat/docs/administrator-guides/integrations",
+  "devDependencies": {
+    "eslint": "^3.16.0",
+    "pre-commit": "^1.2.2"
+  },
+  "scripts": {
+    "lint": "eslint ./ --cache --ignore-pattern .gitignore"
+  },
+  "pre-commit": [
+    "lint"
+  ]
+}
