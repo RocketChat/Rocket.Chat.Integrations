@@ -36,7 +36,7 @@ class Script {
 		} else {
 			return {
 				content: {
-					text: ':grimacing: Well, that\'s embarrasing. We failed to come up with a reply. Maybe you should try a different phrase.'
+					text: ':grimacing: Well, that\'s embarrassing. We failed to come up with a reply. Maybe you should try a different phrase.'
 				}
 			};
 		}
