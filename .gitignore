@@ -75,3 +75,5 @@ settings.json
 build.sh
 /public/livechat
 .eslintcache
+.eslintrc
+.editorconfig
