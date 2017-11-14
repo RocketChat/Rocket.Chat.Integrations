@@ -1,6 +1,7 @@
 # How to Install Polls
 
 Administration -> Integrations -> New Outgoing Webhook Integration
+Event Trigger: `Message Sent`
 Enabled: `true`
 Channel: leave blank or set the channels (comma separated) you want this enabled in
 Trigger Words: `!poll`
