@@ -250,7 +250,7 @@ class Script {
 			// 			text: 'terminate of deployments'
 			// 		};
 
-			// 		// HTTP.call('http://rocketchat.konecty.com/');
+			// 		// HTTP.call('http://crm.rocket.chat/');
 			// 		// deployments = Konecty.find('Deployment', {
 			// 		// 	conditions: [
 			// 		// 		{
