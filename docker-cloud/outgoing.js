@@ -227,7 +227,7 @@ class Script {
 			// 		if (uuid == null) {
 			// 			return this.commands.terminate.help();
 			// 		}
-			// 		// HTTP.call('http://rocketchat.konecty.com/');
+			// 		// HTTP.call('http://crm.rocket.chat/');
 			// 		// deployments = Konecty.find('Deployment', {
 			// 		// 	conditions: [
 			// 		// 		{
