@@ -11,7 +11,7 @@ Send a message with the content `!replygif <tags>` and this integration will add
 ### Configure Rocket.Chat
 Add an "Outgoing Webhook" to your Rocket-Chat Instance (see <a href="https://rocket.chat/docs/administrator-guides/integrations/">Rocket.Chat Documentation</a>)
 
-On the webhook config screen, set the following values:
+On the Webhook config screen, set the following values:
 
 ##### Trigger Words
 Set the trigger words on which the command should be fired e.g. `!replygif`.
