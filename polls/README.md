@@ -1,12 +1,12 @@
 # How to Install Polls
 
-Administration -> Integrations -> New Outgoing Webhook Integration
+Go to Administration : Integrations and add a new Outgoing Webhook Integration
 
 Event Trigger: `Message Sent`
 
 Enabled: `true`
 
-Channel: `leave blank or set the channels (comma separated) you want this enabled in`
+Channel: Set the channels (comma separated) you want this enabled in
 
 Trigger Words: `!poll`
 
@@ -16,10 +16,19 @@ Post as: `rocket.cat`
 
 Alias: `Rocket Poll`
 
-Avatar: `URL: https://cdn2.iconfinder.com/data/icons/Siena/256/poll%20green.png`
+Avatar: URL: `https://cdn2.iconfinder.com/data/icons/Siena/256/poll%20green.png`
 
 Script Enabled: `true`
 
-Script: `Paste the script above into this item`
+Script: (paste the script from `outgoing.js` into this field)
 
-Usage: `!poll "question?" "option 1" "option 2"`
+Usage:
+
+Your poll must start with `!poll`, and the question is delimited at the first `?`, `/` or `:`
+
+
+	!poll Can you choose? Option 1 / Option 2
+
+	!poll Make a choice : First option / Second option
+
+	!poll We must choose / Now / Never

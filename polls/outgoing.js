@@ -2,14 +2,21 @@
 /* globals console, _, s, HTTP */
 
 /*
- * EXAMPLE MESSAGE
+EXAMPLE MESSAGES
 
-/poll "question?" "option 1" "option 2"
+Your poll must start with `!poll` and the question is delimited at the first `?`, `/` or `:`
+ 
 
- */
+  !poll Can you choose? Option 1 / Option 2
+
+  !poll Make a choice : First option / Second option
+
+  !poll We must choose / Now / Never
+
+*/
 
 /** Global Helpers
- *
+ * 
  * console - A normal console instance
  * _       - An underscore instance
  * s       - An underscore string instance
@@ -34,7 +41,7 @@ class Script {
     // request.data.user_name    {string}
     // request.data.text         {string}
     // request.data.trigger_word {string}
-
+    
     const emojis = [
       ':zero:',
       ':one:',
@@ -50,25 +57,26 @@ class Script {
     ];
 
     let match;
-
-    // Change the URL and method of the request
-    match = request.data.text.match(/((["'])(?:(?=(\\?))\3.)*?\2)/g);
-
-    let title = '';
+    let title;
+    
     let options = [];
 
+    // Parse message
+    polltext = request.data.text.replace(/^.poll\s*/, '');
+
+    match = polltext.match(/^.+?[\?\/:]/g);
+    title = match[0].replace(/\/$/, '');
+    
+        match = polltext.match(/(:|\?|\/)[^\/]+/g);
+    
     match.forEach((item, i) => {
-      item = item.replace(/(^['"]|['"]$)/g, '');
-      if (i === 0) {
-        title = item;
-      } else {
-        options.push(emojis[(options.length + 1)] + ' ' + item);
-      }
+      item = item.replace(/^(\/|\?)/g, '- ');
+      options.push(emojis[(options.length + 1)] + ' ' + item);
     });
 
     return {
         message: {
-          text: '_Please vote using reactions_',
+          text: '_Please vote using reaction emojis (top right of this poll message)_',
           attachments: [
             {
               color: '#0000DD',
