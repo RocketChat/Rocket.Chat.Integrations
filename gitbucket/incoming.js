@@ -65,7 +65,7 @@ class Script {
         case 'issue_comment':
         return {
             content:{
-                text: `${request.content.issue.user.login} added comment [#${request.content.comment.id}](${request.content.comment.html_url}) to [#${request.content.issue.number}](${request.content.issue.html_url}) in [${request.content.repository.name}](${request.content.repository.html_url})`
+                text: `${request.content.comment.user.login} added comment [#${request.content.comment.id}](${request.content.comment.html_url}) to [#${request.content.issue.number}](${request.content.issue.html_url}) in [${request.content.repository.name}](${request.content.repository.html_url})`
             }
         };
 
@@ -101,4 +101,4 @@ class Script {
     //   }
     // };
   }
-}
+  
